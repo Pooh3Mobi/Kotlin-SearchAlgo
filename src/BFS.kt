@@ -1,46 +1,10 @@
 import java.util.*
 
 class BreadthFirstSearch {
-    // tree
-    // [a b], [a, c], [a, d]
-    // [b, e], [b, f]
-    // [c, h]
-    // [d, i], [d, j]
-    // [e, k]
-    // [h, g]
-    // [j, l]
-    // find g = [a, c],[c, h], [h, g]
-    lateinit var graph: Node
 
-    init {
-        // g goal
-        val g = Node('G')
-        // l
-        val l = Node('L')
-        // k
-        val k = Node('K')
-        // j
-        val j = Node('J', l)
-        // i
-        val i = Node('I')
-        // h
-        val h = Node('H', g)
-        // f
-        val f = Node('F')
-        // e
-        val e = Node('E', k)
-        // d
-        val d = Node('D', i, j)
-        // c
-        val c = Node('C', h)
-        // b
-        val b = Node('B', e, f)
-        // a
-        val a = Node('A', b, c, d)
-        graph = a
-    }
 
     fun find(t: Char) : Char? {
+        val graph = NodeFactory.test()
         return graph.find(t)
     }
 }
