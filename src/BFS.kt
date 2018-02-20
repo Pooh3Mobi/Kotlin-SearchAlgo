@@ -61,18 +61,6 @@ private fun Node.findRecur(q: Deque<Node>, t: Char) : Char? {
     return findRecur(q, t)
 }
 
-private tailrec fun Node.findRecur2(q: Deque<Node>, t: Char) : Char? =
-    if (q.isEmpty())  null
-    else {
-        val v = q.pop()
-        if (v.c == t){
-            v.c
-        } else if (v.children.isNotEmpty()) {
-            q.addAll(v.children)
-        }
-        findRecur2(q, t)
-    }
-
 private fun Node.findRecur3(q: Deque<Node>, t: Char) : Char? =
     if (q.isEmpty())  null
     else q.pop().let { current ->
