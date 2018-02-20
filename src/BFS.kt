@@ -1,10 +1,7 @@
 import java.util.*
 
-class BreadthFirstSearch {
-
-
+class BreadthFirstSearch(val graph: Node) {
     fun find(t: Char) : Char? {
-        val graph = NodeFactory.test()
         return graph.find(t)
     }
 }

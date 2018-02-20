@@ -1,7 +1,7 @@
 import java.util.*
 
 fun main(args: Array<String>) {
-    val bfs =  BreadthFirstSearch()
+    val bfs =  BreadthFirstSearch(NodeFactory.test())
     fun find(t: Char) {
         System.out.println("============\nstart search \"$t\"")
         val nodes = bfs.find(t)
