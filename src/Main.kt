@@ -1,26 +1,45 @@
-import java.util.*
 
 fun main(args: Array<String>) {
     val bfs =  BreadthFirstSearch(NodeFactory.test())
-    fun find(t: Char) {
-        System.out.println("============\nstart search \"$t\"")
-        val nodes = bfs.find(t)
-        System.out.println("found $nodes")
+    fun findBfs(t: Char) {
+        println("============\nstart bfs search \"$t\"")
+        val node = bfs.find(t)
+        println("found $node")
     }
 
-    find('A')
-    find('B')
-    find('C')
-    find('D')
-    find('E')
-    find('F')
-    find('G')
-    find('H')
-    find('I')
-    find('J')
-    find('K')
-    find('L')
-    find('M')
+    findBfs('A')
+    findBfs('B')
+    findBfs('C')
+    findBfs('D')
+    findBfs('E')
+    findBfs('F')
+    findBfs('G')
+    findBfs('H')
+    findBfs('I')
+    findBfs('J')
+    findBfs('K')
+    findBfs('L')
+    findBfs('M')
+
+    val dfs = DepthFirstSearch(NodeFactory.test())
+    fun findDfs(t: Char) {
+        println("============\nstart dfs search \"$t\"")
+        val node = dfs.find(t)
+        println("found $node")
+    }
+    findDfs('A')
+    findDfs('B')
+    findDfs('C')
+    findDfs('D')
+    findDfs('E')
+    findDfs('F')
+    findDfs('G')
+    findDfs('H')
+    findDfs('I')
+    findDfs('J')
+    findDfs('K')
+    findDfs('L')
+    findDfs('M')
 //            found A
 //            found B
 //            found C
