@@ -7,7 +7,7 @@ class DepthFirstSearch(val graph: Node) {
 }
 
 private fun Node.find(t: Char) : Node? =
-        also { System.out.println("search:${c}") }
+        also { println("search:${c}") }
                 .let {
                     if (t == c) this
                     else children.asSequence()
