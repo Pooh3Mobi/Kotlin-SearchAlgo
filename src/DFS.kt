@@ -9,8 +9,8 @@ class DepthFirstSearch(val graph: Node) {
 private fun Node.find(t: Char) : Node? =
         also { System.out.println("search:${c}") }
                 .let {
-                    if (t == c) return this
-                    else return children.asSequence()
+                    if (t == c) this
+                    else children.asSequence()
                             .map { node -> node?.find(t) }
                             .filterNotNull()
                             .firstOrNull()
